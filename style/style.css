@@ -306,7 +306,7 @@ p {
         display: block;
         width: 340px;
         height: calc(100vw - 32px);
-        max-height: 1000px;
+        max-height: 968px;
         overflow-y: auto;
         overflow-x: hidden;
         transform:rotate(-90deg) translateY(-340px);
