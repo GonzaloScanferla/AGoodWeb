@@ -303,7 +303,8 @@ p {
     /* artículos relacionados */
     .w_related {
         width: 320px;
-        height: 1000px;
+        height: calc(100vw - 32px);
+        max-height: 1000px;
         overflow-y: auto;
         overflow-x: hidden;
         transform:rotate(-90deg) translateY(-320px);
@@ -318,11 +319,13 @@ p {
 
 
     .w_related_product {
-        margin-bottom: 0;
-        transform: rotate(90deg) translatex(-80px) translateY(-10px);
+        margin: 20px;
+        transform: rotate(90deg) translateY(10px) translateX(-20px); 
         width: 300px;
         height: 300px;
+        overflow-y: scroll;
     }
+
 }
 
 /* -----APARTADO DE SORTEO */
