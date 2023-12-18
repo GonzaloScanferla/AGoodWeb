@@ -287,7 +287,6 @@ p {
     padding-top: 12px;
     padding-bottom: 12px;;
     margin-bottom: 16px;
-    position: relative;
     border: 1px solid;
     border-color: var(--C_LGrey);
     border-radius: 8px;
@@ -304,37 +303,31 @@ p {
 /* VERSIÓN DESKTOP */
 @media screen and (min-width:736px) {
     .w_aside {
-        position: relative;
+        /* position: relative; */
     }
     /* artículos relacionados */
     .w_related {
         /* position:absolute; */
-        width: 340px;
-        height: calc(100vw - 32px);
-        max-height: 968px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        transform:rotate(-90deg) translateY(-340px);
-        transform-origin: right top;
+        display: flex;
+        width: calc(100vw - 32px);
+        max-width: 968px;
+        height: 340px;
         border-right: 2px solid lightgray;
         border-left: 2px solid lightgray;
     }
 
-    .w_related::-webkit-scrollbar {
+    /* .w_related::-webkit-scrollbar {
             width: 0;
-    }
+    } */
 
 
     .w_related_product {
         margin: 20px;
         width: 300px;
         height: 300px;
-        transform: rotate(90deg) translateY(0px) translateX(-20px); 
-        overflow-y: scroll;
         &:hover {
             width: 320px;
             height: 320px;
-            transform: rotate(90deg) translateY(10px) translateX(-20px); 
             transition: all 0.3s ease-in-out;
             z-index: 1;
             border-color: var(--C_Grey);
@@ -372,7 +365,7 @@ p {
 /* VERSIÓN DESKTOP */
 @media screen and (min-width:736px) {
     .w_lottery {
-        position: absolute;
+        /* position: absolute; */
         top: 380px;
         display: flex;
         gap: 75px;
