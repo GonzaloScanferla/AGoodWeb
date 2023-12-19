@@ -17,7 +17,6 @@
     --FS_L: 1.3rem;
     --FS_XL: 1.8rem;
     --FS_XXL: 2rem;
-    --F_Roboto: 'Roboto', sans-serif;
     --C_Grey: rgb(77, 77, 77);
     --C_LGrey: rgb(192, 191, 191);
     --C_LBlue: rgb(99, 138, 209);
@@ -31,39 +30,37 @@
     padding: 0;
 }
 
-ul {
-    font-family: var(--F_Roboto);
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {;
     list-style: none;
 }
 
-a {
-    font-family: var(--F_Roboto);
+a {;
     text-decoration: none;
 }
 
 h1 {
     margin: 12px 0;
-    font-family: var(--F_Roboto);
     font-size: var(--FS_XXL);
     font-weight: var(--FW_Bold);
 }
 
 h2 {
     margin: 8px 0;
-    font-family: var(--F_Roboto);
     font-size: var(--FS_XL);
     font-weight: var(--FW_Bold);
 }
 
 h3 {
-    font-family: var(--F_Roboto);
     font-size: var(--FS_L);
     font-weight: var(--FW_Bold);
     margin: 8px 0;
 }
 
 h4 {
-    font-family: var(--F_Roboto);
     font-size: var(--FS_M);
     font-weight: var(--FW_Bold);
     margin: 8px 0;
@@ -72,7 +69,6 @@ h4 {
 
 
 p {
-    font-family: var(--F_Roboto);
     font-size: var(--FS_S);
     font-weight: var(--FW_Medium);
     margin: 0.4rem 0;
@@ -86,7 +82,6 @@ p {
 .btn {
     padding: 8px 12px;
     border-radius: 5px; 
-    font-family: var(--F_Roboto);
     font-weight: var(--FW_Medium);
     font-size: var(--FS_M);
 }
@@ -94,14 +89,21 @@ p {
 .btn--white {
     border: 1px solid grey;
     color: grey;
-    
+    &:hover {
+        border: 1px solid grey;
+        background-color: darkgrey;
+        color: white;
+    }
 }
 
 
 .btn--blue {
-    border: 1px solid blue;
+    border: 1px solid rgb(33, 33, 150);
     background-color: var(--C_LBlue);
     color: white;
+    &:hover {
+        background-color: rgb(33, 33, 200, 0.8);
+    }
 }
 
 .btn--redS {
@@ -297,7 +299,6 @@ p {
     object-fit: cover;
     object-position: center;
     width: 100%;
-    /* aspect-ratio: 2/1; */
 }
 
 /* VERSIÓN DESKTOP */
@@ -308,7 +309,6 @@ p {
         width: calc(100vw - 32px);
         max-width: 968px;
         height: 380px;
-        border: 2px solid lightgray;
         overflow-y: scroll;
         scroll-snap-type: x mandatory;
     }
@@ -325,14 +325,13 @@ p {
             transition: all 0.3s ease-in-out;
             z-index: 1;
             border-color: var(--C_Grey);
+            background-color: rgba(211, 211, 211, 0.5);
         }
-    }
-    .w_related_product section {
         display: flex;
         flex-direction: column;
     }
-
-    .product_desc {
+    
+    .related_product_desc  {
         overflow-y: scroll;
     }
 
